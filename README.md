@@ -1,4 +1,3 @@
-md
 # Lotto Analysis Thai
 
 This project aims to provide tools and analysis for the Thai lottery.
