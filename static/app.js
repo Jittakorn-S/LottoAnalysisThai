@@ -1,4 +1,3 @@
-// static/app.js
 document.addEventListener('DOMContentLoaded', () => {
     let scrapedResultsData = []; 
 
@@ -89,7 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateAnalysisInput(type) {
         if (scrapedResultsData.length === 0) return;
         let numbersForAnalysis = [];
-        scrapedResultsData.forEach(result => {
+        // Reverse the array to have the latest numbers at the end
+        const reversedData = [...scrapedResultsData].reverse();
+        reversedData.forEach(result => {
             let prize = '';
             if (type === 'first_prize') {
                 prize = result['First Prize'];
